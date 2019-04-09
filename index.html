@@ -1,149 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title>MindQ</title>
-    <meta name="description" content="A clean, responsive storefront boilerplate with no database or backend">
+    <title>MindQ - Clothing</title>
+    <meta name="description" content="Designertøj behøver ikke være dyrt.">
     <meta name="author" content="">
 
-    <!-- Mobile Specific Metas -->
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- FONT -->
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- CSS -->
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/imports.min.css">
-    <link rel="stylesheet" href="css/simpleStore.css">
+    <link rel="stylesheet" href="css/simpleStore.min.css">
 
-    <!-- Favicon -->
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137989321-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-137989321-1');
+    </script>
 
 </head>
 <body>
-    <header>
-        <img id="logo" src="images/logo_mindq.png" alt="MindQ logo">
-        <!-- LAV MENU HER -->
-    </header>
-    <!-- Primary Page Layout -->
-    <div class="container simpleStore">
-        <div class="row">
-            <a class="brand" href="#"></a>
-            <a class="button button-primary u-pull-right simpleStore_viewCart">
-                <i class="fa fa-shopping-cart"></i> Kurv <span class="simpleCart_total"></span>
-            </a>
-        </div>
-        <div class="simpleStore_container"></div>
-        <div class="simpleStore_cart_container"></div>
-    </div>
 
-    <!-- Templates -->
+    <!-- Primary Page Layout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="columns four mobile-header">
+                    <nav class="navbar">
+                        <ul class="nav">
+                            <li><a class="active" href="index.html">Forside</a></li>
+                            <li><a href="#store">Webshop</a></li>
+                            <li><a href="https://www.facebook.com/MINDQ.DK/" target="_blank">Om Os</a></li>
+                            <li><a href="#contact">Kontakt</a></li>
+                        </ul>   
+                    </nav>
+                </div>
+                <div class="columns four text-center mobile-header">
+                        <a class="nav-logo" href="index.html"><img class="logo" src="images/logo_white.png"></a>
+                </div>
+                <div class="columns four text-center mobile-header">
+                <a href="#store" class="button button-primary u-pull-right simpleStore_viewCart">
+                <i class="fa fa-shopping-cart"></i> Kurv <span class="simpleCart_total"></span>
+                </a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        </div>
+    </header>
+        <section class="cd-slider-wrapper">
+        <ul class="cd-slider">
+            <li class="visible">
+                <div>
+                    <div class="columns seven">
+                    <h2>Special Designet</h2>
+                    <p>Low Poly Art T-Shirt med komfort</p>
+                    <a href="#store" class="cd-btn">Se alle produkter</a>
+                    </div>
+                </div>
+            </li>
+        </ul> <!-- .cd-slider -->
+    </section> <!-- .cd-slider-wrapper -->
+
+    <section id="store" class="store bg-light">
+        <div class="container simpleStore">
+            <h1 class="title">Webshop</h1>
+            <div class="simpleStore_container"></div>
+            <div class="simpleStore_cart_container"></div>
+        </div>
+    </section>
 
     <!-- Products View -->
-    <main id="products-template" type="x-template">
+    <script id="products-template" type="x-template">
         <div class="column">
             <div class="simpleCart_shelfItem">
-                <img src="" class="item_thumb"/>
+                <img src="" class="item_thumb img-responsive"/>
                 <div class="row">
                     <h5 class="item_name"></h5>
                     <div class="simpleStore_getDetail_container">
+                        <span class="currency">DKK</span>
                         <span class="item_price"></span>
                     </div>
                     <div class="simpleStore_getDetail_container">
-                        <a class="button u-pull-right simpleStore_getDetail">Detaljer</a>
+                        <a class="button u-pull-right simpleStore_getDetail">Se Mere</a>
                     </div>
                 </div>
-
             </div>
         </div>
-    </main>
+    </script>
 
     <!-- Product Detail View -->
-    <section id="product-detail-template" type="x-template">
+    <script id="product-detail-template" type="x-template">
         <div class="simpleCart_shelfItem simpleStore_detailView">
             <a href="#" class="close view_close">&times;</a>
 
             <div class="row">
-                <div class="four columns">
-                    <img src="" class="item_thumb"/>
+                <div class="six columns">
+                    <img src="" class="item_thumb img-responsive"/>
                 </div>
-                <div class="eight columns">
+                <div class="six columns">
                     <h5 class="item_name"></h5>
 
                     <p class="item_description"></p>
+                    <span class="currency">DKK</span>
                     <span class="item_price"></span>
 
                     <div class="qty">
-                        <label>QTY</label>
+                        <label>Antal</label>
                         <input type="number" value="1" min="1" step="1" class="item_Quantity">
                     </div>
                     <div class="simpleStore_options"></div>
-                    <a class="item_add button u-pull-right" href="javascript:;">Læg i kurv</a>
+                    <a class="item_add button u-pull-right" href="javascript:;">Tilføj til kurv</a>
                 </div>
             </div>
         </div>
-    </section>
+    </script>
 
     <!-- Cart View -->
-    <section id="cart-template" type="x-template">
+    <script id="cart-template" type="x-template">
         <div class="simpleStore_cart">
-            <h2>Cart</h2>
+            <h2>Kurv</h2>
             <a href="#" class="close">&times;</a>
 
             <div class="row">
                 <div class="eight columns">
                     <div class="simpleCart_items"></div>
-                    <a href="javascript:;" class="simpleCart_empty u-pull-left">Tøm kurv <i class="fa fa-trash-o"></i></a>
+                    <a href="javascript:;" class="simpleCart_empty u-pull-left">Tøm Kurv <i class="fa fa-trash-o"></i></a>
                 </div>
                 <div class="four columns">
                     <div class="cart_info">
-                        <div class="cart_info_item cart_itemcount">Varer:
+                        <div class="cart_info_item cart_itemcount">Items:
                             <div class="simpleCart_quantity"></div>
                         </div>
-                        <div class="cart_info_item cart_taxrate">Tax Rate:
-                            <div class="simpleCart_taxRate"></div>
-                        </div>
-                        <div class="cart_info_item cart_tax">Tax:
+                        <div class="cart_info_item cart_tax">Moms:
                             <div class="simpleCart_tax"></div>
                         </div>
-                        <div class="cart_info_item cart_shipping">Shipping:
+                        <div class="cart_info_item cart_shipping">Fragt:
                             <div class="simpleCart_shipping"></div>
                         </div>
                         <div class="cart_info_item cart_total"><b>Total:
                             <div class="simpleCart_grandTotal"></div>
                         </b></div>
-                        <a href="javascript:;" class="button button-primary simpleStore_checkout u-pull-right">Checkout <i class="fa fa-arrow-right"></i></a>
+                        <a href="javascript:;" class="button button-primary simpleStore_checkout u-pull-right">Gå til kassen <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </script>
 
     <!-- Error View -->
-    <section id="error-template" type="x-template">
+    <script id="error-template" type="x-template">
         <div class="error">
-            <b>Hov, noget gik galt :(</b>
+            <b>Sorry, something went wrong :(</b>
 			<p class="error_text"></p>
 			<a href="#" class="close alert_close">&times;</a>
         </div>
+    </script>
+
+    <section id="social" class="social">
+        <div class="container">
+                <div class="row">
+                    <div class="columns six">
+                        <a class="a-instagram" href="https://www.instagram.com/mindq.dk/" target="_blank">   
+                        <div class="fm-contact">
+                            <div class="instagram">
+                                <div class="ig-icon"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                                <div class="ig-text">Følg os på Instagram</div>
+                                <p class="fm-instagram">13+ følgere</p>
+                                <p>Men... Vi mangler bare dig...</p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="columns six">
+                        <a class="a-facebook" href="https://www.facebook.com/MINDQ.DK/" target="_blank">   
+                        <div class="fm-contact">
+                            <div class="facebook">
+                                <div class="fm-icon"><i class="fa fa-facebook-square" aria-hidden="true"></i></div>
+                                <div class="fm-text">Følg os på Facebook</div>
+                                <p class="fm-facebook">39+ følgere</p>
+                                <p>Men... Vi mangler bare dig...</p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div><!-- /row -->
+            </div><!-- /container -->
     </section>
 
-    <!-- Notify View -->
-    <section id="notify-template" type="x-template">
-        <div class="notify">
-			<p class="notify_text"></p>
-        </div>
-    </section>
-    <footer>
+    <section id="contact" class="contact section-padding">
+            <div class="container">
+                <div class="row">
+                    
+                    <!-- section heading -->
+                    <div class="section-head">
+                        <h1 class="title">Kontakt Os</h1>
+                    </div>
 
-    </footer>
+                    <div class="offset-by-one columns ten">
+
+                        <!-- contact info -->
+                        <div class="info text-center mb-50">
+
+                            <div class="columns four">
+                                <div class="item">
+                                    <span class="icon"><i class="fa fa-location-arrow" aria-hidden="true"></i></span>
+                                    <h6>Addresse</h6>
+                                    <p>Rørgangen 12, 3. 2690 Karlslunde</p>
+                                </div>
+                            </div>
+
+                            <div class="columns four">
+                                <div class="item">
+                                    <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                    <h6>Email</h6>
+                                    <p>support@mindq.dk</p>
+                                </div>
+                            </div>
+
+                            <div class="columns four">
+                                <div class="item">
+                                    <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                                    <h6>Telefon</h6>
+                                    <p>+45 51 22 34 51</p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div><!-- /row -->
+            </div><!-- /container -->
+        </section>
+
+        <footer class="footer">
+            <p class="copyright">2019 © MindQ. Alle rettigheder forbeholdes.</p>
+        </footer>
+
+<!-- End Document
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 
-<!-- Scripts -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Scripts
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="js/simpleCart.min.js"></script>
-<script src="js/simpleStore.js"></script>
-
+<script src="js/simpleStore.min.js"></script>
 <script src="js/config.js"></script>
+<script src="js/main.js"></script>
 
 </html>

@@ -1,56 +1,58 @@
 {
 	"products" : [
 		{
-			"name" : "Awesome T-shirt",
-			"price" : "141.95",
+			"name" : "This is Paris / T-Shirt",
+			"price" : "299",
 			"options" : [
-				{ "Size" : "Small,Medium,Large" },
-				{ "Color" :"White"}
+				{ "Size" : "Small,Medium,Large,X-Large" }
 			],
-			"image" : "http://upload.wikimedia.org/wikipedia/commons/c/c6/Grey_Tshirt.jpg",
-			"description" : "This is a very awesome grey T-shirt"
+			"image" : "images/products/product_paris.png",
+			"description" : "Kortærmet T-Shirt med rund hals og asymmetrisk sømkant."
 		},
 		{
-			"name" : "Cool T-shirt",
-			"price" : "141.95",
+			"name" : "This is London / T-Shirt",
+			"price" : "299",
 			"options" : [
-				{ "Size" : "Small,Medium,Large" },
-				{ "Color" : "White" },
-			    { "OneOfAKind" : true }
+				{ "Size" : "Small,Medium,Large,X-Large" }
 			],
-			"image" : "http://upload.wikimedia.org/wikipedia/commons/2/24/Blue_Tshirt.jpg",
-			"description" : "This is a really cool blue T-shirt",
-			"soldOut" : true
+			"image" : "images/products/product_london.png",
+			"description" : "Kortærmet T-Shirt med rund hals og asymmetrisk sømkant."
 		},
 		{
-			"name" : "Fun T-shirt",
-			"price" : "141.95",
+			"name" : "This is Cairo / T-Shirt",
+			"price" : "299",
 			"options" : [
-				{ "Size" : "Small,Medium,Large" },
-				{ "Color" :"White"}
+				{ "Size" : "Small,Medium,Large,X-Large" }
 			],
-			"image" : "http://upload.wikimedia.org/wikipedia/commons/c/c6/Grey_Tshirt.jpg",
-			"description" : "This is another fun grey T-shirt"
+			"image" : "images/products/product_cairo.png",
+			"description" : "Kortærmet T-shirt med rund hals og asymmetrisk sømkant, og med print af monument foran."
 		},
 		{
-			"name" : "Awesome T-shirt",
-			"price" : "141.95",
+			"name" : "This is New York / T-Shirt",
+			"price" : "299",
 			"options" : [
-				{ "Size" : "Small,Medium,Large" },
-				{ "Color" :"White"}
+				{ "Size" : "Small,Medium,Large,X-Large" }
 			],
-			"image" : "http://upload.wikimedia.org/wikipedia/commons/c/c6/Grey_Tshirt.jpg",
-			"description" : "This is a very awesome grey T-shirt"
+			"image" : "images/products/product_newyork.png",
+			"description" : "Kortærmet T-Shirt med rund hals og asymmetrisk sømkant."
 		},
 		{
-			"name" : "Awesome T-shirt",
-			"price" : "141.95",
+			"name" : "This is Rome / T-Shirt",
+			"price" : "299",
 			"options" : [
-				{ "Size" : "Small,Medium,Large" },
-				{ "Color" :"White"}
+				{ "Size" : "Small,Medium,Large,X-Large" }
 			],
-			"image" : "http://upload.wikimedia.org/wikipedia/commons/c/c6/Grey_Tshirt.jpg",
-			"description" : "This is a very awesome grey T-shirt"
+			"image" : "images/products/product_rome.png",
+			"description" : "Kortærmet T-Shirt med rund hals og asymmetrisk sømkant."
+		},
+		{
+			"name" : "This is Sydney / T-Shirt",
+			"price" : "299",
+			"options" : [
+				{ "Size" : "Small,Medium,Large,X-Large" }
+			],
+			"image" : "images/products/product_sydney.png",
+			"description" : "Kortærmet T-Shirt med rund hals og asymmetrisk sømkant."
 		}
 	]
 }
